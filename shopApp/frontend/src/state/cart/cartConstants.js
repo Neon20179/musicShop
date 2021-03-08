@@ -1,0 +1,3 @@
+export const ADD_TO_CART = "PROP / ADD_TO_CART"
+export const DELETE_FROM_CART = "PROP / DELETE_FROM_CART"
+export const CHECKOUT_REQUEST = "API / CHECKOUT_REQUEST"

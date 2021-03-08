@@ -1,0 +1,24 @@
+.discover__tag-info {
+  height: calc(100% - var(--discover-tags-section-height));
+  position: relative;
+  display: flex;
+
+  h3 {
+    margin: 2rem auto 0px;
+    width: calc(100% - 100px + 10px);
+    font-size: 1.5rem;
+  }
+
+  .tracks {
+    width: calc(100% - 100vh + var(--discover-tags-section-height));
+  }
+
+  .selected-track-info {
+    transition: background 0.5s ease;
+    width: calc(100vh - var(--discover-tags-section-height));
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: var(--grey);
+  }
+}

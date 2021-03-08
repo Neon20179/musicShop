@@ -1,0 +1,84 @@
+header {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  gap: 8rem;
+  z-index: 1000;
+  color: var(--white);
+
+  .logo {
+    transform: translateY(40px);
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--white);
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 2rem 3rem;
+
+      div,
+      a {
+        cursor: pointer;
+        opacity: 0.6;
+        display: grid;
+        text-align: center;
+        transition: all 1s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      span {
+        font-size: 15px;
+      }
+
+      img {
+        margin: 0 auto;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .theme-toggle {
+    transform: translateY(-40px);
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 60px;
+
+    .sun-icon,
+    .moon-icon {
+      width: 60px;
+      transition: all 1s ease;
+      position: absolute;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .moon-icon {
+      transform: translateY(60px);
+    }
+  }
+}

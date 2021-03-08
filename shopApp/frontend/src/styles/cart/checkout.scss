@@ -1,0 +1,117 @@
+.checkout {
+  .close-btn {
+    cursor: pointer;
+    background: none;
+    color: var(--white);
+    border: none;
+    font-size: 1.8rem;
+    width: 38px;
+    border-radius: 100%;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 1rem;
+    padding-top: 4rem;
+
+    .submit-btn {
+      display: inline-block;
+      position: relative;
+      width: 12rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &:hover {
+        .btn-circle {
+          width: 100%;
+
+          .btn-arrow {
+            transform: rotate(-45deg) translate(10px, 10px);
+          }
+        }
+      }
+
+      .btn-circle {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        background: linear-gradient(to right, var(--blue), transparent);
+        border-radius: 1.625rem 0 0 1.625rem;
+        transition: all 0.6s ease;
+
+        .btn-arrow {
+          width: 0.8rem;
+          height: 0.8rem;
+          top: 1rem;
+          left: 0.8rem;
+          position: absolute;
+          border-bottom: solid var(--main-text-color) 2px;
+          border-right: solid var(--main-text-color) 2px;
+          transform: rotate(-45deg);
+          transition: all 0.6s ease;
+        }
+      }
+
+      .btn-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-transform: uppercase;
+        transform: translate(5px, 13px);
+        transition: all 0.6s ease;
+        font-size: 1rem;
+        color: var(--main-text-color);
+      }
+    }
+
+    input {
+      width: 400px;
+      font-size: 1.3rem;
+      background: none;
+      border: none;
+      border-bottom: var(--white) 1px solid;
+      padding-bottom: 0.3rem;
+      color: var(--white);
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:focus {
+        opacity: 1;
+        outline: none !important;
+      }
+    }
+
+    h4 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid;
+      padding-bottom: 2rem;
+    }
+  }
+}

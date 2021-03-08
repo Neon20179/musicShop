@@ -1,0 +1,37 @@
+.discover__tags-section {
+  transition: background 0.5s ease;
+  background: var(--support-bg-color);
+  overflow-x: auto;
+  height: var(--discover-tags-section-height);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .container {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem;
+
+    .single-tag {
+      cursor: pointer;
+      width: calc(708px / 5);
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      .tag-image {
+        margin: 0 auto;
+
+        img {
+          border-radius: 7px;
+          width: 130px;
+          height: 130px;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+export const GET_ALL_ARTISTS = "API / GET_ALL_ARTISTS"
+export const SELECT_ARTIST = "PROP / SELECT_ARTIST"

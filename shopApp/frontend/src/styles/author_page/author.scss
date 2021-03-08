@@ -1,0 +1,49 @@
+@import "./albums.scss";
+
+.author-page-section {
+  display: flex;
+
+  .author-container {
+    position: relative;
+    width: calc(100vh + 100px);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .author-name {
+      left: 0;
+      right: 0;
+      position: absolute;
+      font-weight: 300;
+      text-align: center;
+      transform: translateY(140px);
+      font-size: 6rem;
+      color: var(--white);
+    }
+
+    .author-bio {
+      position: absolute;
+      width: 300px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      bottom: 0;
+      padding-bottom: 3rem;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      color: var(--white);
+    }
+
+    .img-author-icon {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

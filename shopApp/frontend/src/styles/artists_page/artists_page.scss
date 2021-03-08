@@ -1,0 +1,42 @@
+@import "./artist_info.scss";
+
+.artists-section {
+  height: 100%;
+  width: calc(100% - 200px);
+  right: 0;
+  position: absolute;
+
+  .artists_list-section {
+    transition: background 0.5s ease;
+    background: var(--support-bg-color);
+    overflow-x: auto;
+    height: var(--discover-tags-section-height);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .container {
+      display: flex;
+      position: absolute;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem;
+
+      .single-artist {
+        width: 170px;
+        height: 200px;
+        cursor: pointer;
+        overflow: hidden;
+        text-align: center;
+
+        .artist-image {
+          img {
+            width: calc(100% - 30px);
+            border-radius: 100%;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+}

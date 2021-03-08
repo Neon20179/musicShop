@@ -1,0 +1,74 @@
+.artists__artist-info {
+  height: calc(100% - var(--discover-tags-section-height));
+  display: flex;
+
+  .artist-short-info {
+    width: calc(100% - 100vh + var(--discover-tags-section-height));
+    padding: 2rem;
+    position: relative;
+
+    h3 {
+      font-size: 3rem;
+      position: relative;
+      padding: 1rem;
+
+      .default-name {
+        position: absolute;
+        width: 200px;
+        height: 30px;
+        background: var(--grey);
+        transition: all 0.5s ease;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+
+      .default-bio {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 800px;
+          height: 15px;
+          background: var(--grey);
+          transform: translateY(40px);
+          transition: all 0.5s ease;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 600px;
+          height: 15px;
+          transform: translateY(70px);
+          background: var(--grey);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    a {
+      pointer-events: none;
+      text-decoration: none;
+      color: #fff;
+      padding: 1rem;
+      background: var(--grey);
+      border-radius: 7px;
+      font-size: 1.2rem;
+      position: absolute;
+      bottom: 2rem;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .artist-image {
+    transition: background 0.5s ease;
+    width: calc(100vh - var(--discover-tags-section-height));
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: var(--grey);
+  }
+}

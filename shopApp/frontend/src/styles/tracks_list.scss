@@ -1,0 +1,37 @@
+.tracks-list-component {
+  width: calc(100% - 100px + 10px);
+  margin: 1rem auto;
+  height: 100%;
+  overflow-y: auto;
+
+  .tracks-list {
+    width: 100%;
+    gap: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 450px;
+
+    .default-tracks > div {
+      transition: background 0.5s ease;
+      height: 45px;
+      background: var(--support-bg-color);
+      margin: 1rem 0;
+    }
+
+    .track-container {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      background: var(--support-bg-color);
+
+      img {
+        margin: 0 4rem 0 1rem;
+        width: 45px;
+      }
+    }
+  }
+}

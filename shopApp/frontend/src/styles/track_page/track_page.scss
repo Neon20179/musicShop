@@ -1,0 +1,166 @@
+@import "./rating.scss";
+
+.single-track-page {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+
+  .mask {
+    transition: background 0.5s ease;
+    height: 100%;
+    background: rgba(var(--mask-color), 0.6);
+    backdrop-filter: blur(7px);
+
+    .container {
+      display: flex;
+      gap: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+
+      .track-image {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 1rem;
+
+        .image-container {
+          width: 450px;
+
+          img {
+            width: 100%;
+            border-radius: 1rem;
+          }
+        }
+
+        .commerce {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .price {
+            gap: 1rem;
+            display: flex;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            color: var(--main-text-color);
+            transform: translateY(10px);
+            transition: color 0.5s ease;
+          }
+
+          .to-cart-btn {
+            display: inline-block;
+            position: relative;
+            width: 12rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            background: none;
+            border: none;
+
+            &:focus {
+              outline: none !important;
+            }
+
+            &:hover {
+              .btn-circle {
+                width: 100%;
+
+                .btn-arrow {
+                  transform: rotate(-45deg) translate(10px, 10px);
+                }
+              }
+            }
+
+            .btn-circle {
+              position: relative;
+              width: 3rem;
+              height: 3rem;
+              background: linear-gradient(to right, var(--blue), transparent);
+              border-radius: 1.625rem 0 0 1.625rem;
+              transition: all 0.6s ease;
+
+              .btn-arrow {
+                width: 0.8rem;
+                height: 0.8rem;
+                top: 1rem;
+                left: 0.8rem;
+                position: absolute;
+                border-bottom: solid var(--main-text-color) 2px;
+                border-right: solid var(--main-text-color) 2px;
+                transform: rotate(-45deg);
+                transition: all 0.6s ease;
+              }
+            }
+
+            .btn-text {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              text-align: center;
+              text-transform: uppercase;
+              transform: translate(5px, 13px);
+              transition: all 0.6s ease;
+              font-size: 1rem;
+              color: var(--main-text-color);
+            }
+          }
+        }
+      }
+
+      .additional-info {
+        width: 700px;
+        padding: 1rem;
+
+        .header {
+          .track-name {
+            display: flex;
+            font-size: 35px;
+            font-weight: 900;
+            align-items: center;
+            justify-content: space-between;
+
+            .rating {
+              font-size: 40px;
+
+              small {
+                font-size: 1rem;
+                transform: translateY(22px);
+              }
+            }
+          }
+
+          .author {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.1rem;
+
+            a {
+              text-decoration: none;
+              color: var(--blue);
+            }
+          }
+        }
+
+        .lyrics-container {
+          position: relative;
+          overflow-y: auto;
+          height: 450px;
+          margin-top: 1rem;
+
+          &::-webkit-scrollbar-track {
+            background: none;
+          }
+
+          .lyrics {
+            position: absolute;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
