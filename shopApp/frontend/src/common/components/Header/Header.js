@@ -16,7 +16,7 @@ const Header = ({ cartTabToggle }) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/artists">
+                        <NavLink to="/artists/">
                             <img src="/static/media/microphone.png" /><span>Artists</span>
                         </NavLink>
                     </li>
