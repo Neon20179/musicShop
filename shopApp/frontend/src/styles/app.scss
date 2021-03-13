@@ -1,8 +1,8 @@
 @use './tabs';
 @use './pages';
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap");
+@use './components/tracks_list';
 
-@import "./tracks_list.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap");
 
 :root {
   --main-bg-color: #fff;

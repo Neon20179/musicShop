@@ -2,8 +2,6 @@
 
 Music shop app based on Django, DRF, React, Redux<br/><br />
 
-### SSR coming soon(i hope)...
-
 ### Discover Page
 
 ![Discover page](https://github.com/Neon20179/musicShop/blob/master/read_me_images/discover_page.png?raw=true)
@@ -35,3 +33,7 @@ Music shop app based on Django, DRF, React, Redux<br/><br />
 
 ![Cart](https://github.com/Neon20179/musicShop/blob/master/read_me_images/cart.png?raw=true)
 ![Checkout](https://github.com/Neon20179/musicShop/blob/master/read_me_images/checkout.png?raw=true)
+
+### Search
+
+![Search](https://github.com/Neon20179/musicShop/blob/master/read_me_images/search-tab.png?raw=true)
