@@ -1,0 +1,34 @@
+@use '../../components/buttons';
+@use '../../components/inputs';
+
+.checkout {
+  .close-btn {
+    @include buttons.cross-button;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 1rem;
+    padding-top: 4rem;
+
+    .submit-btn {
+      @include buttons.highlight-button;
+    }
+
+    input {
+      @include inputs.regular-input;
+    }
+
+    h4 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid;
+      padding-bottom: 2rem;
+    }
+  }
+}

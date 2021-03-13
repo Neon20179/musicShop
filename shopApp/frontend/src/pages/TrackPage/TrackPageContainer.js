@@ -9,7 +9,7 @@ import TrackPage from './components/TrackPage'
 const TrackPageContainer = ({ track, getTrackData, addTrackToCart, match }) => {
     useEffect(() => {
         getTrackData(getUrlPk(match))
-    }, [])
+    }, [match])
 
     return (
         <TrackPage track={track} addTrackOnClick={() => addTrackToCart(track)} />

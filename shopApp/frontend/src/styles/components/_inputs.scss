@@ -1,0 +1,20 @@
+@mixin regular-input {
+  width: 400px;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  border-bottom: var(--white) 1px solid;
+  padding-bottom: 0.3rem;
+  color: var(--white);
+  opacity: 0.6;
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+    outline: none !important;
+  }
+}

@@ -2,7 +2,7 @@ from rest_framework import status, filters, generics, viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-from .utils import _count_total_or_false, _substract_track_quantity ,_get_client_ip, _update_track_rating
+from .utils import  _count_total_or_false, _substract_track_quantity ,_get_client_ip, _update_track_rating
 from .models import Tag, Rating, Track, Author
 from .serializers import serializers
 
@@ -25,23 +25,15 @@ class TrackRetriveApiView(generics.RetrieveAPIView):
     serializer_class = serializers.TrackSerializer
 
 
-class FindTrack(generics.ListAPIView):
-    """ Finds track by name """
-    search_fields = ['name']
-    filter_backends = (filters.SearchFilter,)
-    queryset = Track.objects.all()
-    serializer_class = serializers.TrackSerializer
-
-
 @api_view(["GET"])
-def get_track_quantity(request):
-    track_id = request.query_params.get('trackId')
+def find_track(request):
     try:
-        track = Track.objects.get(id=track_id)
-        return Response(track.quantity, status=status.HTTP_200_OK)
+        tracks = Track.objects.filter(name__contains=request.query_params.get('search'))[:10]
+        serialized_tracks = serializers.TrackSerializer(tracks, many=True)
+        return Response(serialized_tracks.data, status=status.HTTP_200_OK)
     except Track.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
-    except Excaption as ex:
+    except Exception:
         return Response(status=status.HTTP_400_BAD_REQUEST)
 
 

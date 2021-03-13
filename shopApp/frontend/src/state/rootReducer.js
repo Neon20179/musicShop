@@ -6,6 +6,7 @@ import authorReducer from './author/authorReducer'
 import trackPageReducer from './trackPage/trackReducer'
 import alertReducer from './alert/alertReducer'
 import cartReducer from './cart/cartReducer'
+import searchReducer from './search/searchReducer'
 
 const rootReducer = combineReducers({
     trackListReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     authorReducer,
     trackPageReducer,
     alertReducer,
-    cartReducer
+    cartReducer,
+    searchReducer
 })
 
 export default rootReducer

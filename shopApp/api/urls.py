@@ -11,8 +11,7 @@ urlpatterns = [
     # GET
     path('', include(router.urls)),
     path('track/<int:pk>/', views.TrackRetriveApiView.as_view()),
-    path('find_track/', views.FindTrack.as_view()),
-    path('get_track_quantity/', views.get_track_quantity),
+    path('find_track/', views.find_track),
 
     # POST
     path('order/', views.make_order),

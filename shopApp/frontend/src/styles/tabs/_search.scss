@@ -1,0 +1,80 @@
+@use '../components/inputs';
+
+.search-tab {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+  transform: translateY(-300px);
+  margin: auto;
+  width: 600px;
+  height: 300px;
+  border-radius: 0 0 7px 7px;
+  transition: all 1s ease-in-out;
+
+  button {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: -30px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background: var(--grey);
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+    transition: all 0.5s ease;
+    z-index: -1;
+
+    &:hover {
+      box-shadow: #a4c7ee 0px 1px 10px;
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    img {
+      width: 20px;
+      opacity: 0.6;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .wrapper {
+    background: var(--grey);
+    height: 100%;
+    border-radius: 0 0 7px 7px;
+
+    input {
+      @include inputs.regular-input;
+      margin: 1rem 100px;
+    }
+
+    .result-container {
+      overflow: auto;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 1rem;
+      gap: 1rem;
+
+      .track {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        text-decoration: none;
+        color: var(--white);
+
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

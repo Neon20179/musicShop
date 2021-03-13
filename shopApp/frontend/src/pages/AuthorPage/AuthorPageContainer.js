@@ -23,7 +23,8 @@ const AuthorPageContainer = (
         <Author authorData={authorData} activeTrackImage={activeTrack.image}
             isAuthorTrackPlaying={isAuthorTrackPlaying(authorData.id, activeTrack.author)}
         >
-            <Albums authorName={authorData.name} tracksData={albumTracks}>
+            <Albums authorName={authorData.name}
+                tracksData={albumTracks}>
                 {authorData.author_albums?.map(album =>
                     <Album key={album.id} album={album}
                         selectAlbumOnClick={() => selectAlbum(album.album_tracks, album.id)}

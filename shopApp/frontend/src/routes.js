@@ -8,12 +8,14 @@ import DiscoverPageContainer from './pages/DiscoverPage/DiscoverPageContainer'
 import ArtistsPageContainer from './pages/ArtistsPage/ArtistsPageContainer'
 import TrackPageContainer from './pages/TrackPage/TrackPageContainer'
 import AuthorPageContainer from './pages/AuthorPage/AuthorPageContainer'
+import SearchContainer from './common/containers/SearchContainer'
 
 const routes = (
     <BrowserRouter>
         <Header />
         <CartContainer />
         <MusicPlayerContainer />
+        <SearchContainer />
         <AlertContainer />
         <main>
             <Switch>

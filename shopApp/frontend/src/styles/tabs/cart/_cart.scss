@@ -1,4 +1,4 @@
-@import "./checkout.scss";
+@use '../../components/buttons';
 
 .cart {
   color: var(--white);
@@ -39,23 +39,7 @@
         width: 60px;
 
         button {
-          cursor: pointer;
-          background: none;
-          color: var(--white);
-          border: none;
-          font-size: 1.8rem;
-          width: 38px;
-          border-radius: 100%;
-          transition: all 0.5s ease;
-          opacity: 0.6;
-
-          &:hover {
-            opacity: 1;
-          }
-
-          &:focus {
-            outline: none !important;
-          }
+          @include buttons.cross-button;
         }
       }
 
